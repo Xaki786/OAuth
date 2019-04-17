@@ -1,0 +1,19 @@
+<% include partials/header.ejs%> <%if(ejsUser){%>
+<main class="text-center">
+  <h1 class="mt-5 mb-3">
+    <%=ejsUser.username%>
+  </h1>
+  <figure class="figure">
+    <img
+      src="<%=ejsUser.image%>"
+      class="figure-img img-fluid rounded"
+      alt="<%=ejsUser.username%>"
+    />
+    <figcaption class="figure-caption">
+      <%=ejsUser.username%>
+    </figcaption>
+  </figure>
+  <%}else{%>
+  <h1>No user found</h1>
+  <%} %> <% include partials/footer.ejs%>
+</main>
